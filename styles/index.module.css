@@ -1,0 +1,79 @@
+  .productGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .productCard {
+    flex: 0 0 calc(33.333% - 20px); /* 3 columns per row on desktop */
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .productCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .productCard img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .productCard {
+      flex: 0 0 calc(100% - 20px); /* 1 column per row on mobile */
+    }
+  }
+  
+  .contentRow {
+    margin: 20px;
+  }
+
+  .fullRow {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Adjust as needed */
+    align-items: center; /* Adjust as needed */
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  /* Modal styles */
+  
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background: #fff;
+    padding: 60px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modalContent img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .modalContent button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
